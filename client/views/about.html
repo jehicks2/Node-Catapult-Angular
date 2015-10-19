@@ -1,3 +1,18 @@
-<div class='jumbotron' ng-controller="AboutCtrl">
-  <h1>{{header}}</h1>
+<div class='jumbotron' ng-controller="pokeInfo">
+  <h1>{{message}}</h1>
+
+  <input type = "text" ng-model= "search" ng-change= "change()" onclick="select()" placeholder= 'Search Pokemon'> 
+  <div class= 'pokemons'>
+  	<!-- <div class = "pokemon" ng-repeat = "name in details| filter:search"> -->
+	  <div ng-if= "!details">
+	  	Loading...
+	  </div>
+
+  	  <p><strong>Pokemon: </strong> {{details.name}}</p>
+
+  	  <ul ng-controller="pokedex" ng-repeat = "pokemon in names | filter:search ">
+  	  	<li>{{details.name}} </li>
+  	  </ul>
+  	<!-- </div> -->
+  </div>
 </div>
