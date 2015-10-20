@@ -9,6 +9,7 @@
 	  </div>
 
   	  <p><strong>Pokemon: </strong> {{details.name}}</p>
+      <p><strong>Sprite: </strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></p>
 
   	  <ul ng-controller="pokedex" ng-repeat = "pokemon in names | filter:search ">
   	  	<li>{{details.name}} </li>

@@ -24,7 +24,13 @@ angular.module('PokeNow')
    			.success(function(data){
    				console.log("Data:", data.name)
    				$scope.details = data;
-   			});
+
+        });
+        $http.get("http://pokeapi.co/api/v1/sprite/" +$scope.search)
+        .success(function(data){
+          console.log("data:", data.image)
+          $scope.sprite = data;
+        })
    			
 
 	   		$scope.update = function(pokemon){
