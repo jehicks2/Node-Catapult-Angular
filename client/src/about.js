@@ -23,47 +23,57 @@ angular.module('PokeNow')
 
    			$http.get("http://pokeapi.co/api/v1/pokemon/" +$scope.search)
      			.success(function(data){
-     				console.log("Data:", data.name)
-            console.log("img: ", data.resource_uri)
-            console.log("data:nb", data.sprites)
+     				// console.log("Data:", data.name)
+         //    console.log("img: ", data.resource_uri)
+         //    console.log("data:nb", data.sprites)
             $scope.details = data;
+            console.log(data.abilities[0].name)
+            console.log(data.name)
              for(var i = 0; i< data.types.length; i++){
-             console.log("types", data.types[i])
+             // console.log("types", data.types[i])
              $scope.types = data;
            }
+            for(var i = 0; i < data.abilities.length; i++){
+
+              $scope.ability = data;
+
+            }
+
              for(var i = 0; i<data.descriptions.length; i++){
            			 $http.get("http://pokeapi.co" +data.descriptions[0].resource_uri)
                   .success(function(data){
                     // for(var i = 0; i < pokeCount.length; i++){
                     //   if(data.des)
-                    console.log("data:", data.description)
+                    // console.log("data:", data.description)
                     $scope.des = data;
                   // }
                 })
              }
-             console.log(data.descriptions[0].resource_uri)
+
+             // console.log(data.descriptions[0].resource_uri)
               $http.get("http://pokeapi.co/" + data.sprites[0].resource_uri)
                 .success(function(data){
-                  console.log("imguri: ", data.image)
+                  // console.log("imguri: ", data.image)
+                  // console.log("data:", data.image)
                   $scope.sprite = data;
                 
               })
+              // $http.get("http://pokeapi.co/" + data.abilities)
+              // .success(function(data){
+              // console.log(data.abilities)
+              //   // for(var i = 0; i < pokeCount.length; i++){
+              //   //   if(data.des)
+              //   console.log("data:", data.description)
+              //   $scope.ability = data;
+              // // }
             
           });
 
 
-        //   $http.get("http://pokeapi.co/api/v1/description/" +$scope.search)
-        //   .success(function(data){
-        //     // for(var i = 0; i < pokeCount.length; i++){
-        //     //   if(data.des)
-        //     console.log("data:", data.description)
-        //     $scope.des = data;
-        //   // }
-        // })
         
 
-	   		$scope.update = function(pokemon){
-	   			$scope.search = pokemon.name;
+	   		$scope.update = function(data){
+	   			$scope.search = data.name;
 	   			$scope.change()
 	   		};
 

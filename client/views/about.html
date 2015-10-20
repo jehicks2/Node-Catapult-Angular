@@ -1,21 +1,22 @@
 <div class='jumbotron' ng-controller="pokeInfo">
   <h1>{{message}}</h1>
 
-  <input type = "text" ng-model= "search" ng-change= "change()" onclick="select()" placeholder= 'Search Pokemon'> 
+  <input type = "text" ng-model= "search" ng-change= "change()" onclick="select()" placeholder= 'Search Pokemon' autofocus> 
   <div class= 'pokemons'>
-  	<!-- <div class = "pokemon" ng-repeat = "name in details| filter:search"> -->
-	  <div ng-if= "!details">
-	  	Loading...
-	  </div>
+  	<!-- <div class = "pokemon" ng-repeat = "name in details.name| filter:search"> -->
+    <div ng-if= "!details">
+      Loading...
+    </div>
+  	  <!-- <ul class= "PokemonList" ng-controller="pokedex" ng-repeat = "pokemon in pokemon | filter:search orderBy: 'name' ">
+  	  	<li>{{pokemon.name}} </li>
+  	  </ul> -->
 
-  	  <p><strong>Pokemon: </strong> {{details.name}}</p>
+      <p><strong>Pokemon: </strong> {{details.name}}</p>
       <p><strong>Type: </strong>{{types.types[0].name}}</p>
       <p><strong>Sprite: </strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></p>
       <p><strong>Description: </strong>{{des.description}}</p>
+      <p><strong>Abilities: </strong>{{ability.abilities[1].name}}</p>
 
-  	  <!-- <ul ng-controller="pokedex" ng-repeat = "pokemon in names | filter:search ">
-  	  	<li>{{details.name}} </li>
-  	  </ul>
- -->  	<!-- </div> -->
+  	<!-- </div> -->
   </div>
 </div>
