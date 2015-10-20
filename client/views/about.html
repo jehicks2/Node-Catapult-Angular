@@ -7,15 +7,21 @@
     <div ng-if= "!details">
       Loading...
     </div>
-  	  <!-- <ul class= "PokemonList" ng-controller="pokedex" ng-repeat = "pokemon in pokemon | filter:search orderBy: 'name' ">
-  	  	<li>{{pokemon.name}} </li>
-  	  </ul> -->
+  	  <div class= "PokemonList" ng-controller="pokeInfo" ng-repeat = "name in pokeAttrNames | filter:search ">
+  	  	<p ng-hide = "{{name}}">{{name}} </p>
+  	  </div>
 
       <p><strong>Pokemon: </strong> {{details.name}}</p>
-      <p><strong>Type: </strong>{{types.types[0].name}}</p>
-      <p><strong>Sprite: </strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></p>
+      <p><strong></strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></p>
+      <strong>Stats: <strong>
+        <p>HP: {{details.hp}}</p>
+        <p>Height: {{details.height}}</p>
+        <p>Weight: {{details.weight}}</p>
+      
+
+      <p><strong>Type: </strong>{{type.name}}</p>
+      <p><strong>Abilities: </strong>{{ability.name}}</p>
       <p><strong>Description: </strong>{{des.description}}</p>
-      <p><strong>Abilities: </strong>{{ability.abilities[1].name}}</p>
 
   	<!-- </div> -->
   </div>
