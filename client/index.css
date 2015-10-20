@@ -1,7 +1,12 @@
+@font-face{
+  font-family: 'pokemon_gb';
+  src: url("**/Fonts/PKMN_RBYGSC.ttf") ;
+}
 body{
 background-image: url("../images/whiteBG.jpg");
 background-repeat: no-repeat;
 background-size: 100%;
+font-family: "pokemon_bg", sans-serif;
 
 }
 h1{
@@ -10,7 +15,8 @@ h1{
 }
 
 .btn {
-  background: #639FDE;
+  font-family: "pokemon_bg", sans-serif;
+  background: red;
   border-radius: 28px;
   font-family: sans-serif;
   color: #ffffff;
@@ -26,6 +32,7 @@ h1{
 
 
 .jumbotron{
+  font-family: "pokemon_bg", sans-serif;
   background-image: url("../images/ngdem1.jpg");
   background-size: 775px 687px;
   background-repeat: no-repeat;
@@ -45,51 +52,107 @@ h1{
   right: 0;
 }
 
+.jumbotron2{
+  font-family: "pokemon_bg", sans-serif;
+  background-image: none;
+  background-size: 775px 687px;
+  width: 775px;
+  height: 687px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.wtrainers{
+  font-family: "pokemon_bg", sans-serif;
+  color: red;
+  position: relative;
+  top: 200px;
+  left: 250px;
+}
+
+a{
+  font-family: "pokemon_bg", sans-serif;
+  position: relative;
+  top: 200px;
+  left: 280px;
+}
+
+.copy{
+  font-family: "pokemon_bg", sans-serif;
+  position: relative;
+  top: 630px;
+  left: 10px;
+}
+
+.owned{
+  font-family: "pokemon_bg", sans-serif;
+  position: relative;
+  top: 594px;
+  left: 1030px;
+}
+
 .welcome{
+  font-family: "pokemon_bg", sans-serif;
+  color: red;
   position: relative;
   top: -5px;
   left: 220px;
 }
 
+input{
+  font-size: 20px;
+  text-align: center;
+}
+
 .input{
+  font-family: "pokemon_bg", sans-serif;
+  height: 30px;
+  width: 300px;
   position: relative;
   top: 40px;
-  left: 450px;
+  left: 350px;
 
 }
 
 .Pokemon{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
-  top: 100px;
-  left: 485px;
+  top: 78px;
+  left: 478px;
 
 
 }
 .Sprite{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: 45px;
   left: 85px;
 }
 img{
+  font-family: "pokemon_bg", sans-serif;
   height:150px;
   width:150px;
 }
-.Dets{
+/*.Dets{
 
-}
+}*/
 .Type{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: -55px;
   left: 500px;
 
 }
 .Abil{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: -8px;
   left:320px;
 
 }
 .Descrip{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: 100px;
   left: 30px;
@@ -98,12 +161,14 @@ img{
 }
 
 .hp{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: 0px;
   left: 320px;
 }
 
 .stats{
+  font-family: "pokemon_bg", sans-serif;
   position: relative;
   top: 45px;
   left: 500px;
