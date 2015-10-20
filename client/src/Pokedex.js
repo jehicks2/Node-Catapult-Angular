@@ -2,7 +2,7 @@
 
 angular.module('PokeNow')
 .controller('pokedex', function($scope){
-    $scope.pokemon =  [
+    $scope."pokemon": [
         {
             "name": "rattata",
             "resource_uri": "api/v1/pokemon/19/"

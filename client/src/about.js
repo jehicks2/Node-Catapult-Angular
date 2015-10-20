@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('PokeNow')
-  .controller('pokeInfo', ['$scope','$http', function($scope,$http) {
+  .controller('pokeInfo', ['$scope','$http', function($scope,$http, population) {
     $scope.message = "Welcome to PokeNow!";
     var searchTask; 
     // var pokeCount = 778;
@@ -79,17 +79,17 @@ angular.module('PokeNow')
                   // console.log("data:", data.image)
                   $scope.sprite = data;
               })
-              $http.get('http://pokeapi.co/api/v1/pokedex/1/')
-              .then(function(result){
-                result.data.pokemon.forEach(function(poke){
-                  // console.log(poke.resource_uri)
-                  $http.get('http://pokeapi.co/' + poke.resource_uri)
-                    .then(function(value) {
-                      // console.log(value.data.name)
-                      $scope.pokeAttrNames.push(value.data.name);
-                    });
-                });
-              });  
+              // $http.get('http://pokeapi.co/api/v1/pokedex/1/')
+              // .then(function(result){
+              //   result.data.pokemon.forEach(function(poke){
+              //     // console.log(poke.resource_uri)
+              //     $http.get('http://pokeapi.co/' + poke.resource_uri)
+              //       .then(function(value) {
+              //         // console.log(value.data.name)
+              //         $scope.pokeAttrNames.push(value.data.name);
+              //       });
+              //   });
+              // });  
               
             
           });

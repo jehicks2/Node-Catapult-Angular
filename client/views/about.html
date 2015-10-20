@@ -1,27 +1,29 @@
 <div class='jumbotron' ng-controller="pokeInfo">
-  <h1>{{message}}</h1>
+  <h1 class = "welcome">{{message}}</h1>
 
-  <input type = "text" ng-model= "search" ng-change= "change()" onclick="select()" placeholder= 'Search Pokemon' autofocus> 
+  <input class="input" type = "text" ng-model= "search" ng-change= "change()" onclick="select()" placeholder= 'Search Pokemon' autofocus> 
   <div class= 'pokemons'>
   	<!-- <div class = "pokemon" ng-repeat = "name in details.name| filter:search"> -->
     <div ng-if= "!details">
       Loading...
     </div>
   	  <div class= "PokemonList" ng-controller="pokeInfo" ng-repeat = "name in pokeAttrNames | filter:search ">
-  	  	<p ng-hide = "{{name}}">{{name}} </p>
+  	  	<p>{{name}} </p>
   	  </div>
 
-      <p><strong>Pokemon: </strong> {{details.name}}</p>
-      <p><strong></strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></p>
-      <strong>Stats: <strong>
-        <p>HP: {{details.hp}}</p>
-        <p>Height: {{details.height}}</p>
-        <p>Weight: {{details.weight}}</p>
+      <div class= "Pokemon"><strong> </strong> {{details.name}}</div>
+      <div class= "Sprite"><strong></strong><img ng-src = "http://www.pokeapi.co{{sprite.image}}" /></div>
+      <div class= "Dets"><strong><strong>
+        <div class= "hp">HP: {{details.hp}}</div>
+        <div class= "stats">Height: {{details.height}} <br>
+        Weight: {{details.weight}}</div>
+        <!-- <div class= "weight">Weight: {{details.weight}}</div> -->
+      </div>
       
 
-      <p><strong>Type: </strong>{{type.name}}</p>
-      <p><strong>Abilities: </strong>{{ability.name}}</p>
-      <p><strong>Description: </strong>{{des.description}}</p>
+      <div class= "Type"><strong>Type: </strong>{{type.name}}</div>
+      <div class= "Abil"><strong>Abilities: </strong><br>{{ability.name}}</div>
+      <div class= "Descrip"><strong>Description: </strong><br><br>{{des.description}}</div>
 
   	<!-- </div> -->
   </div>

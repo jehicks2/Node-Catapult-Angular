@@ -1,3 +1,9 @@
+body{
+background-image: url("../images/whiteBG.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+
+}
 h1{
 	color: #2380E2;
 	font-family: sans-serif;
@@ -20,7 +26,95 @@ h1{
 
 
 .jumbotron{
-	background-color: #dcdcdc;
-	text-align: center;
+  background-image: url("../images/ngdem1.jpg");
+  background-size: 775px 687px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid;
+  width: 775px;
+  height: 687px;
+	/*background-color: #dcdcdc;*/
+	/*text-align: center;*/
 	border-radius: 2px;
+  position: relative;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
+
+.welcome{
+  position: relative;
+  top: -5px;
+  left: 220px;
+}
+
+.input{
+  position: relative;
+  top: 40px;
+  left: 450px;
+
+}
+
+.Pokemon{
+  position: relative;
+  top: 100px;
+  left: 485px;
+
+
+}
+.Sprite{
+  position: relative;
+  top: 45px;
+  left: 85px;
+}
+img{
+  height:150px;
+  width:150px;
+}
+.Dets{
+
+}
+.Type{
+  position: relative;
+  top: -55px;
+  left: 500px;
+
+}
+.Abil{
+  position: relative;
+  top: -8px;
+  left:320px;
+
+}
+.Descrip{
+  position: relative;
+  top: 100px;
+  left: 30px;
+  word-wrap: break-word;
+  width: 700px;
+}
+
+.hp{
+  position: relative;
+  top: 0px;
+  left: 320px;
+}
+
+.stats{
+  position: relative;
+  top: 45px;
+  left: 500px;
+}
+/*.height{
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.weight{
+  position: relative;
+  top: 100px;
+  left: 100px;
+}*/
